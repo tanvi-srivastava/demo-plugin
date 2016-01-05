@@ -28,9 +28,10 @@
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="ZicoxPrinter">
         <param name="android-package" value="com.paytm.cordova.ZicoxPrinter" />
-        <param name="onload" value="true" />
       </feature>
     </config-file>
 
+     <source-file src="src/android/res/values/zicoxprintercordova.xml" target-dir="res/values" />
+     <source-file src="src/android/com/paytm/cordova/ZicoxPrinter.java" target-dir="src/com/paytm/cordova"/>
     </platform>
 </plugin>
