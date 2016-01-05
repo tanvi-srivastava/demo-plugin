@@ -33,11 +33,11 @@ public class ZicoxPrinter extends CordovaPlugin {
         return false;
     }
 
-    private void printBarcode(packageId){
+    private void printBarcode(String packageId){
         Log.i("Error", "plugin working fine. Pkg Id:" + packageId);
     }
 
-    private void printLabel(data){
+    private void printLabel(String data){
         Log.i("Error", "plugin working fine. data: " + data);
     }
 
