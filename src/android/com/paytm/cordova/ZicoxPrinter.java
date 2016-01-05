@@ -22,7 +22,7 @@ import java.util.Map;
 public class ZicoxPrinter extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("printBarcode")) {
             printBarcode(args.getString(0));
             return true;
