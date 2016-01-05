@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.paytm.cordova"
+        version="0.0.1">
+
+  <name>ZicoxPrinter</name>
+
+  <description>
+    This Plugin allows you to integrate ZicoxPrinter sdk into a cordova app.
+  </description>
+
+  <author>Tanvi Srivastava</author>
+
+  <license>MIT</license>
+
+  <keywords>Mobile, Zicox</keywords>
+  <repo>https://github.com/samyam-a/PayTM-PhoneGap-Plugin.git</repo>
+
+  <issue>https://github.com/samyam-a/PayTM-PhoneGap-Plugin/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/zicoxPrinter.js" name="zicoxPrinter">
+    <clobbers target="zicoxPrinter" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ZicoxPrinter">
+        <param name="android-package" value="com.paytm.cordova.ZicoxPrinter" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/res/values/zicoxprintercordova.xml" target-dir="res/values" />
+    <source-file src="src/android/com/paytm/cordova/ZicoxPrinter.java" target-dir="src/com/paytm/cordova"/>
+  </platform>
+</plugin>
